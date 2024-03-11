@@ -1,1 +1,45 @@
-<span style=\"color:red\">Hi!!</span>
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>yo is noah</title>
+    </head>
+    <body>
+        <h1>noah clicker v0.0.2</h1>
+        <hr>
+
+        <button onclick="noahclick()"><img src="noah.png" width="1000" height="250" alt="noah" title="noah"></button>
+        <br>
+        <h2 id="counting">you have $0</h2>
+        <h2 id="multiplier">markiplier: 1x</h2>
+        <br>
+        <button onclick="buycat()" id="noahcat">buy noah cat ($10)</button>
+
+        <script>
+            let money = 0
+            let moneymultiplier = 1
+
+            function updatemoney() {
+                document.getElementById('counting').innerHTML = `you have $${money}`
+                document.getElementById('multiplier').innerHTML = `markiplier: ${moneymultiplier}x`
+            }
+
+            function noahclick(){
+                money = Math.floor(money+moneymultiplier)
+
+                updatemoney()
+            }
+
+            let catprice = 10
+            function buycat(){
+                if (money >= catprice) {
+                    money -= catprice
+                    catprice = Math.floor(catprice * 1.5)
+                    moneymultiplier += 1
+                    updatemoney()
+                    document.getElementById('noahcat').innerHTML = `buy noah cat ($${catprice})`
+                }
+            }
+        </script>
+    </body>
+</html>

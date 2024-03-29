@@ -5,10 +5,10 @@
         <title>yo</title>
     </head>
     <body>
-        <h1>clicker game v0.0.3</h1>
+        <h1>clicker game v0.0.4 FIXED!!!!</h1>
         <hr>
 
-        <button onclick="click()"><img src="noah.png" width="1000" height="250" alt="noah" title="noah"></button>
+        <button onclick="toclick()"><img src="noah.png" width="1000" height="250" alt="noah" title="noah"></button>
         <br>
         <h2 id="counting">you have $0</h2>
         <h2 id="multiplier">markiplier: 1x</h2>
@@ -24,7 +24,7 @@
                 document.getElementById('multiplier').innerHTML = `markiplier: ${moneymultiplier}x`
             }
 
-            function click(){
+            function toclick(){
                 money = Math.floor(money+moneymultiplier)
 
                 updatemoney()

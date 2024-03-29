@@ -8,12 +8,12 @@
         <h1>noah clicker v0.0.2</h1>
         <hr>
 
-        <button onclick="noahclick()"><img src="noah.png" width="1000" height="250" alt="noah" title="noah"></button>
+        <button onclick="click()"><img src="noah.png" width="1000" height="250" alt="noah" title="noah"></button>
         <br>
         <h2 id="counting">you have $0</h2>
         <h2 id="multiplier">markiplier: 1x</h2>
         <br>
-        <button onclick="buycat()" id="noahcat">buy noah cat ($10)</button>
+        <button onclick="buycat()" id="cat">buy cat ($10)</button>
 
         <script>
             let money = 0
@@ -24,7 +24,7 @@
                 document.getElementById('multiplier').innerHTML = `markiplier: ${moneymultiplier}x`
             }
 
-            function noahclick(){
+            function click(){
                 money = Math.floor(money+moneymultiplier)
 
                 updatemoney()
@@ -37,7 +37,7 @@
                     catprice = Math.floor(catprice * 1.5)
                     moneymultiplier += 1
                     updatemoney()
-                    document.getElementById('noahcat').innerHTML = `buy noah cat ($${catprice})`
+                    document.getElementById('cat').innerHTML = `buy cat ($${catprice})`
                 }
             }
         </script>
